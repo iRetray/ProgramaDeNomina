@@ -12,7 +12,7 @@ namespace ProgramaDeFactoracion
 {
     public partial class Form1 : Form
     {
-        Facturador facturador = new Facturador();
+        Nomina facturador = new Nomina();
         DataTable tablaDatos = new DataTable();
 
         public Form1()
