@@ -8,88 +8,118 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProgramaDeFactoracion
-{
-    public partial class Form1 : Form
-    {
+namespace ProgramaDeFactoracion {
+    public partial class Form1 : Form {
         Nomina facturador = new Nomina();
         DataTable tablaDatos = new DataTable();
 
-        public Form1()
-        {
+        public Form1() {
             InitializeComponent();
-            tablaDatos.Columns.Add("Código");
-            tablaDatos.Columns.Add("Artículo");
-            tablaDatos.Columns.Add("Precio unitario con IVA incluido");
-            tablaDatos.Columns.Add("Porcentaje IVA");
-            tablaDatos.Columns.Add("Cantidad");
-            tablaDatos.Columns.Add("Subtotal sin IVA");
-            tablaDatos.Columns.Add("Valor IVA");
-            tablaDatos.Columns.Add("Total");
+            tablaDatos.Columns.Add("Cédula");
+            tablaDatos.Columns.Add("Nombres");
+            tablaDatos.Columns.Add("Sueldo");
+            tablaDatos.Columns.Add("Días");
+            tablaDatos.Columns.Add("NHED");
+            tablaDatos.Columns.Add("NHEN");
+            tablaDatos.Columns.Add("NHEDD");
+            tablaDatos.Columns.Add("NHEDN");
+            tablaDatos.Columns.Add("NHRN");
+            tablaDatos.Columns.Add("Transporte");
+            tablaDatos.Columns.Add("NHED Valor");
+            tablaDatos.Columns.Add("NHEN Valor");
+            tablaDatos.Columns.Add("NHEDD Valor");
+            tablaDatos.Columns.Add("NHEDN Valor");
+            tablaDatos.Columns.Add("NHRN Valor");
+            tablaDatos.Columns.Add("Valor extras");
+            tablaDatos.Columns.Add("Devengado");
+            tablaDatos.Columns.Add("Salud");
+            tablaDatos.Columns.Add("Pensión");
+            tablaDatos.Columns.Add("Aporte solidario");
+            tablaDatos.Columns.Add("UVT");
+            tablaDatos.Columns.Add("Retefuente");
+            tablaDatos.Columns.Add("Deducido");
+            tablaDatos.Columns.Add("Neto");
             gridDatos.DataSource = tablaDatos;
-            facturador.conectarSQL();
+            actualizarDatosEnTabla();
         }
 
         private void buttonAñadir_Click(object sender, EventArgs e) {
-            int valorIVA = Convert.ToInt32(value: textPrecio.Text) * Convert.ToInt32(value: textIVA.Text) / 100 * Convert.ToInt32(value: textCantidad.Text);
-            int total = Convert.ToInt32(value: textPrecio.Text) * Convert.ToInt32(value: textCantidad.Text);
-            int subtotal = total - valorIVA;
-            Producto newProducto = new Producto( 
-                textCodigo.Text, 
-                textDescripcion.Text, 
-                textPrecio.Text, 
-                Convert.ToInt32(value: textIVA.Text), 
-                Convert.ToInt32(value: textCantidad.Text), 
-                subtotal, 
-                valorIVA, 
-                total 
-            );
-            facturador.añadirProducto(newProducto);
+            int cedula = Convert.ToInt32(textCedula.Text);
+            String nombre = textNombre.Text;
+            double sueldo = Convert.ToDouble(textSueldo.Text);
+            int dias = Convert.ToInt32(textDias.Text);
+            int NHED = Convert.ToInt32(textNHED.Text);
+            int NHEN = Convert.ToInt32(textNHEN.Text);
+            int NHEDD = Convert.ToInt32(textNHEDD.Text);
+            int NHEDN = Convert.ToInt32(textNHEDN.Text);
+            int NHRN = Convert.ToInt32(textNHRN.Text);
+            Trabajador newT = new Trabajador(
+                cedula,
+                nombre,
+                sueldo,
+                dias,
+                NHED,
+                NHEN,
+                NHEDD,
+                NHEDN,
+                NHRN,
+                0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                0.0, 0.0, 0.0, 0.0, 0.0
+               );
+            facturador.insertIntoDB(newT);
             actualizarDatosEnTabla();
         }
 
         private void actualizarDatosEnTabla() {
             tablaDatos.Clear();
-            foreach ( var producto in facturador.obtenerProductos() ) {
+            foreach (var trabajador in facturador.getDataDB()) {
                 DataRow nuevaFila = tablaDatos.NewRow();
-                nuevaFila["Código"] = producto.codigo;
-                nuevaFila["Artículo"] = producto.descripcion;
-                nuevaFila["Precio unitario con IVA incluido"] = producto.precio;
-                nuevaFila["Porcentaje IVA"] = producto.IVA;
-                nuevaFila["Cantidad"] = producto.cantidad;
-                nuevaFila["Subtotal sin IVA"] = producto.subtotal;
-                nuevaFila["Valor IVA"] = producto.valorIVA;
-                nuevaFila["Total"] = producto.total;
+                nuevaFila["Cédula"] = trabajador.cedula;
+                nuevaFila["Nombres"] = trabajador.nombre;
+                nuevaFila["Sueldo"] = trabajador.sueldo;
+                nuevaFila["Días"] = trabajador.dias;
+                nuevaFila["NHED"] = trabajador.nhed;
+                nuevaFila["NHEN"] = trabajador.nhen;
+                nuevaFila["NHEDD"] = trabajador.nhedd;
+                nuevaFila["NHEDN"] = trabajador.nhedn;
+                nuevaFila["NHRN"] = trabajador.nhrn;
+                nuevaFila["Transporte"] = trabajador.transporte;
+                nuevaFila["NHED Valor"] = trabajador.nhedValor;
+                nuevaFila["NHEN Valor"] = trabajador.nhenValor;
+                nuevaFila["NHEDD Valor"] = trabajador.nheddValor;
+                nuevaFila["NHEDN Valor"] = trabajador.nhednValor;
+                nuevaFila["NHRN Valor"] = trabajador.nhrnValor;
+                nuevaFila["Valor extras"] = trabajador.extras;
+                nuevaFila["Devengado"] = trabajador.devengado;
+                nuevaFila["Salud"] = trabajador.salud;
+                nuevaFila["Pensión"] = trabajador.pension;
+                nuevaFila["Aporte solidario"] = trabajador.solidiario;
+                nuevaFila["UVT"] = trabajador.uvt;
+                nuevaFila["Retefuente"] = trabajador.retefuente;
+                nuevaFila["Deducido"] = trabajador.deducido;
+                nuevaFila["Neto"] = trabajador.neto;
                 tablaDatos.Rows.Add(nuevaFila);
                 limpiarCampos();
             }
         }
 
         private void limpiarCampos() {
-            textCantidad.Text = "";
-            textCodigo.Text = "";
-            textDescripcion.Text = "";
-            textIVA.Text = "";
-            textPrecio.Text = "";
+
+            textCedula.Text = "";
+            textNombre.Text = "";
+            textSueldo.Text = "";
+            textDias.Text = "";
+            textNHED.Text = "";
+            textNHEN.Text = "";
+            textNHEDD.Text = "";
+            textNHEDN.Text = "";
+            textNHRN.Text = "";
+
+            cedulaGet.Text = "";
+            cedulaDelete.Text = "";
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
+        private void textBox3_TextChanged(object sender, EventArgs e) {
 
         }
     }

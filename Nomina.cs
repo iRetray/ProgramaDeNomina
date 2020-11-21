@@ -8,9 +8,9 @@ using MySql.Data.MySqlClient;
 namespace ProgramaDeFactoracion {
     public class Nomina {
         List<Trabajador> listaTrabajadores = new List<Trabajador>();
-        string connectionString = "datasource=localhost;port=3306;username=root;password=;database=test;";
+        string connectionString = "datasource=localhost;port=3306;username=root;password=;database=nomina;";
 
-        private Trabajador completeData(Trabajador t) {
+        private Trabajador completeData(Trabajador t) {            
             t.transporte = 102854;
             t.nhedValor = t.nhed * 4572;
             t.nhenValor = t.nhen * 6401;
@@ -20,6 +20,9 @@ namespace ProgramaDeFactoracion {
             t.extras = t.nhedValor + t.nhenValor + t.nheddValor + t.nhednValor + t.nhrnValor;
             t.devengado = t.extras + (t.sueldo/24 * t.dias);
             t.salud = t.sueldo * 0.04;
+            Console.WriteLine(t.salud);
+            t.salud = Convert.ToDouble(Convert.ToString(t.salud).Replace(",", "."));
+            Console.WriteLine(t.salud);
             t.pension = t.sueldo * 0.04;
             if(t.sueldo>=(877803*4)) {
                 t.solidiario = t.sueldo * 0.01;
@@ -35,7 +38,10 @@ namespace ProgramaDeFactoracion {
 
         public void insertIntoDB(Trabajador newTrabajador) {
             newTrabajador = completeData(newTrabajador);
-            string query = "INSERT INTO employees ('cedula', 'nombre', 'sueldo', 'dias', 'nhed', 'nhen', 'nhedd', 'nhedn', 'nhrn', 'transporte', 'nhedv', 'nhenv', 'nheddv', 'nhednv', 'nhrnv', 'extras', 'devengado', 'salud', 'pension', 'solidario', 'uvt', 'retefuente', 'deducido', 'neto') VALUES (" + newTrabajador.cedula + ", " + newTrabajador.nombre + ", " + newTrabajador.sueldo + ", " + newTrabajador.dias + ", " + newTrabajador.nhed + ", " + newTrabajador.nhen + ", " + newTrabajador.nhedd + ", " + newTrabajador.nhedn + ", " + newTrabajador.nhrn + ", " + newTrabajador.transporte + ", " + newTrabajador.nhedValor + ", " + newTrabajador.nhenValor + ", " + newTrabajador.nheddValor + ", " + newTrabajador.nhednValor + ", " + newTrabajador.nhrnValor + ", " + newTrabajador.extras + ", " + newTrabajador.devengado + ", " + newTrabajador.salud + ", " + newTrabajador.pension + ", " + newTrabajador.solidiario + ", " + newTrabajador.uvt + ", " + newTrabajador.retefuente + ", " + newTrabajador.deducido + ", " + newTrabajador.neto + ")";
+            string query = "INSERT INTO employees " +
+                "(`cedula`, `nombre`, `sueldo`, `dias`, `nhed`, `nhen`, `nhedd`, `nhedn`, `nhrn`, `transporte`, `nhedv`, `nhenv`, `nheddv`, `nhednv`, `nhrnv`, `extras`, `devengado`, `salud`, `pension`, `solidario`, `uvt`, `retefuente`, `deducido`, `neto`) VALUES " +
+                "(" + newTrabajador.cedula + ", " + newTrabajador.nombre + ", " + newTrabajador.sueldo + ", " + newTrabajador.dias + ", " + newTrabajador.nhed + ", " + newTrabajador.nhen + ", " + newTrabajador.nhedd + ", " + newTrabajador.nhedn + ", " + newTrabajador.nhrn + ", " + newTrabajador.transporte + ", " + newTrabajador.nhedValor + ", " + newTrabajador.nhenValor + ", " + newTrabajador.nheddValor + ", " + newTrabajador.nhednValor + ", " + newTrabajador.nhrnValor + ", " + newTrabajador.extras + ", " + newTrabajador.devengado + ", " + newTrabajador.salud + ", " + newTrabajador.pension + ", " + newTrabajador.solidiario + ", " + newTrabajador.uvt + ", " + newTrabajador.retefuente + ", " + newTrabajador.deducido + ", " + newTrabajador.neto + ")";
+            Console.WriteLine(query);
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
