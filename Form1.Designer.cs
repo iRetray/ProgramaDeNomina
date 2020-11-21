@@ -770,6 +770,7 @@
             this.button2.TabIndex = 81;
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // cedulaGet
             // 

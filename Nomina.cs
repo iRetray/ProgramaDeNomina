@@ -113,7 +113,8 @@ namespace ProgramaDeFactoracion {
         }
 
         public void deleteData(int cedula) {
-            string query = "DELETE FROM employees WHERE 'cedula' = "+cedula;
+            string query = "DELETE FROM employees WHERE `cedula` = " + cedula;
+            Console.WriteLine(query);
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;

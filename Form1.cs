@@ -43,6 +43,12 @@ namespace ProgramaDeFactoracion {
             actualizarDatosEnTabla();
         }
 
+        private void buttonEliminar_Click(object sender, EventArgs e) {
+            int cedula = Convert.ToInt32(cedulaDelete.Text);
+            facturador.deleteData(cedula);
+            actualizarDatosEnTabla();
+        }
+
         private void buttonConsultar_Click(object sender, EventArgs e) {
             int cedula = Convert.ToInt32(cedulaGet.Text);
             Trabajador oneT = facturador.getOneData(cedula);
