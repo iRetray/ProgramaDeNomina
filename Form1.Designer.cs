@@ -67,29 +67,29 @@
             this.label22 = new System.Windows.Forms.Label();
             this.nhedd = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.extras = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.transporte = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.nhrn = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.nhedn = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
+            this.solidario = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
+            this.pension = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
+            this.salud = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
+            this.devengado = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
+            this.neto = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
+            this.deducido = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
+            this.retefuente = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
+            this.uvt = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -217,6 +217,7 @@
             this.button1.TabIndex = 19;
             this.button1.Text = "Consultar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.buttonConsultar_Click);
             // 
             // label11
             // 
@@ -232,12 +233,11 @@
             // name
             // 
             this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.Location = new System.Drawing.Point(205, 101);
+            this.name.Location = new System.Drawing.Point(149, 101);
             this.name.Name = "name";
             this.name.Padding = new System.Windows.Forms.Padding(10);
-            this.name.Size = new System.Drawing.Size(105, 34);
+            this.name.Size = new System.Drawing.Size(211, 34);
             this.name.TabIndex = 21;
-            this.name.Text = "dataName";
             this.name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textNombre
@@ -396,12 +396,11 @@
             // sueldo
             // 
             this.sueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sueldo.Location = new System.Drawing.Point(205, 135);
+            this.sueldo.Location = new System.Drawing.Point(152, 135);
             this.sueldo.Name = "sueldo";
             this.sueldo.Padding = new System.Windows.Forms.Padding(10);
-            this.sueldo.Size = new System.Drawing.Size(105, 34);
+            this.sueldo.Size = new System.Drawing.Size(208, 34);
             this.sueldo.TabIndex = 47;
-            this.sueldo.Text = "dataSueldo";
             this.sueldo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label13
@@ -418,12 +417,11 @@
             // dias
             // 
             this.dias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dias.Location = new System.Drawing.Point(205, 169);
+            this.dias.Location = new System.Drawing.Point(188, 169);
             this.dias.Name = "dias";
             this.dias.Padding = new System.Windows.Forms.Padding(10);
-            this.dias.Size = new System.Drawing.Size(105, 34);
+            this.dias.Size = new System.Drawing.Size(172, 34);
             this.dias.TabIndex = 49;
-            this.dias.Text = "dataSueldo";
             this.dias.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
@@ -440,12 +438,11 @@
             // nhed
             // 
             this.nhed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhed.Location = new System.Drawing.Point(205, 203);
+            this.nhed.Location = new System.Drawing.Point(179, 203);
             this.nhed.Name = "nhed";
             this.nhed.Padding = new System.Windows.Forms.Padding(10);
-            this.nhed.Size = new System.Drawing.Size(105, 34);
+            this.nhed.Size = new System.Drawing.Size(166, 34);
             this.nhed.TabIndex = 51;
-            this.nhed.Text = "dataSueldo";
             this.nhed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label23
@@ -462,12 +459,11 @@
             // nhen
             // 
             this.nhen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhen.Location = new System.Drawing.Point(205, 237);
+            this.nhen.Location = new System.Drawing.Point(176, 237);
             this.nhen.Name = "nhen";
             this.nhen.Padding = new System.Windows.Forms.Padding(10);
-            this.nhen.Size = new System.Drawing.Size(105, 34);
+            this.nhen.Size = new System.Drawing.Size(184, 34);
             this.nhen.TabIndex = 53;
-            this.nhen.Text = "dataSueldo";
             this.nhen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label22
@@ -484,12 +480,11 @@
             // nhedd
             // 
             this.nhedd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhedd.Location = new System.Drawing.Point(205, 271);
+            this.nhedd.Location = new System.Drawing.Point(182, 271);
             this.nhedd.Name = "nhedd";
             this.nhedd.Padding = new System.Windows.Forms.Padding(10);
-            this.nhedd.Size = new System.Drawing.Size(105, 34);
+            this.nhedd.Size = new System.Drawing.Size(163, 34);
             this.nhedd.TabIndex = 55;
-            this.nhedd.Text = "dataSueldo";
             this.nhedd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label24
@@ -503,16 +498,15 @@
             this.label24.Text = "NHEDD Valor:";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label12
+            // extras
             // 
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(205, 410);
-            this.label12.Name = "label12";
-            this.label12.Padding = new System.Windows.Forms.Padding(10);
-            this.label12.Size = new System.Drawing.Size(105, 34);
-            this.label12.TabIndex = 63;
-            this.label12.Text = "dataSueldo";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.extras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.extras.Location = new System.Drawing.Point(179, 410);
+            this.extras.Name = "extras";
+            this.extras.Padding = new System.Windows.Forms.Padding(10);
+            this.extras.Size = new System.Drawing.Size(166, 34);
+            this.extras.TabIndex = 63;
+            this.extras.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label17
             // 
@@ -525,16 +519,15 @@
             this.label17.Text = "Total Extras:";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label19
+            // transporte
             // 
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(205, 376);
-            this.label19.Name = "label19";
-            this.label19.Padding = new System.Windows.Forms.Padding(10);
-            this.label19.Size = new System.Drawing.Size(105, 34);
-            this.label19.TabIndex = 61;
-            this.label19.Text = "dataSueldo";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.transporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transporte.Location = new System.Drawing.Point(179, 376);
+            this.transporte.Name = "transporte";
+            this.transporte.Padding = new System.Windows.Forms.Padding(10);
+            this.transporte.Size = new System.Drawing.Size(166, 34);
+            this.transporte.TabIndex = 61;
+            this.transporte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label20
             // 
@@ -547,16 +540,15 @@
             this.label20.Text = "Transporte:";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label25
+            // nhrn
             // 
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(205, 342);
-            this.label25.Name = "label25";
-            this.label25.Padding = new System.Windows.Forms.Padding(10);
-            this.label25.Size = new System.Drawing.Size(105, 34);
-            this.label25.TabIndex = 59;
-            this.label25.Text = "dataSueldo";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.nhrn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nhrn.Location = new System.Drawing.Point(179, 342);
+            this.nhrn.Name = "nhrn";
+            this.nhrn.Padding = new System.Windows.Forms.Padding(10);
+            this.nhrn.Size = new System.Drawing.Size(166, 34);
+            this.nhrn.TabIndex = 59;
+            this.nhrn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label26
             // 
@@ -569,16 +561,15 @@
             this.label26.Text = "NHRN Valor:";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label27
+            // nhedn
             // 
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(205, 308);
-            this.label27.Name = "label27";
-            this.label27.Padding = new System.Windows.Forms.Padding(10);
-            this.label27.Size = new System.Drawing.Size(105, 34);
-            this.label27.TabIndex = 57;
-            this.label27.Text = "dataSueldo";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.nhedn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nhedn.Location = new System.Drawing.Point(179, 308);
+            this.nhedn.Name = "nhedn";
+            this.nhedn.Padding = new System.Windows.Forms.Padding(10);
+            this.nhedn.Size = new System.Drawing.Size(166, 34);
+            this.nhedn.TabIndex = 57;
+            this.nhedn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label28
             // 
@@ -591,16 +582,15 @@
             this.label28.Text = "NHEDN Valor:";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label29
+            // solidario
             // 
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(494, 209);
-            this.label29.Name = "label29";
-            this.label29.Padding = new System.Windows.Forms.Padding(10);
-            this.label29.Size = new System.Drawing.Size(105, 34);
-            this.label29.TabIndex = 71;
-            this.label29.Text = "dataSueldo";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.solidario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.solidario.Location = new System.Drawing.Point(480, 209);
+            this.solidario.Name = "solidario";
+            this.solidario.Padding = new System.Windows.Forms.Padding(10);
+            this.solidario.Size = new System.Drawing.Size(119, 34);
+            this.solidario.TabIndex = 71;
+            this.solidario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label30
             // 
@@ -613,16 +603,15 @@
             this.label30.Text = "Fondo solidario:";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label31
+            // pension
             // 
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(494, 175);
-            this.label31.Name = "label31";
-            this.label31.Padding = new System.Windows.Forms.Padding(10);
-            this.label31.Size = new System.Drawing.Size(105, 34);
-            this.label31.TabIndex = 69;
-            this.label31.Text = "dataSueldo";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pension.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pension.Location = new System.Drawing.Point(449, 175);
+            this.pension.Name = "pension";
+            this.pension.Padding = new System.Windows.Forms.Padding(10);
+            this.pension.Size = new System.Drawing.Size(150, 34);
+            this.pension.TabIndex = 69;
+            this.pension.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label32
             // 
@@ -635,16 +624,15 @@
             this.label32.Text = "Pension:";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label33
+            // salud
             // 
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(494, 141);
-            this.label33.Name = "label33";
-            this.label33.Padding = new System.Windows.Forms.Padding(10);
-            this.label33.Size = new System.Drawing.Size(105, 34);
-            this.label33.TabIndex = 67;
-            this.label33.Text = "dataSueldo";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.salud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salud.Location = new System.Drawing.Point(446, 141);
+            this.salud.Name = "salud";
+            this.salud.Padding = new System.Windows.Forms.Padding(10);
+            this.salud.Size = new System.Drawing.Size(153, 34);
+            this.salud.TabIndex = 67;
+            this.salud.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label34
             // 
@@ -657,16 +645,15 @@
             this.label34.Text = "Salud:";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label35
+            // devengado
             // 
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(494, 107);
-            this.label35.Name = "label35";
-            this.label35.Padding = new System.Windows.Forms.Padding(10);
-            this.label35.Size = new System.Drawing.Size(105, 34);
-            this.label35.TabIndex = 65;
-            this.label35.Text = "dataSueldo";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.devengado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.devengado.Location = new System.Drawing.Point(465, 107);
+            this.devengado.Name = "devengado";
+            this.devengado.Padding = new System.Windows.Forms.Padding(10);
+            this.devengado.Size = new System.Drawing.Size(134, 34);
+            this.devengado.TabIndex = 65;
+            this.devengado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label36
             // 
@@ -679,16 +666,15 @@
             this.label36.Text = "Devengado:";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label37
+            // neto
             // 
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(494, 345);
-            this.label37.Name = "label37";
-            this.label37.Padding = new System.Windows.Forms.Padding(10);
-            this.label37.Size = new System.Drawing.Size(105, 34);
-            this.label37.TabIndex = 79;
-            this.label37.Text = "dataSueldo";
-            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.neto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.neto.Location = new System.Drawing.Point(449, 345);
+            this.neto.Name = "neto";
+            this.neto.Padding = new System.Windows.Forms.Padding(10);
+            this.neto.Size = new System.Drawing.Size(150, 34);
+            this.neto.TabIndex = 79;
+            this.neto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label38
             // 
@@ -701,16 +687,15 @@
             this.label38.Text = "Neto:";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label39
+            // deducido
             // 
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(494, 311);
-            this.label39.Name = "label39";
-            this.label39.Padding = new System.Windows.Forms.Padding(10);
-            this.label39.Size = new System.Drawing.Size(105, 34);
-            this.label39.TabIndex = 77;
-            this.label39.Text = "dataSueldo";
-            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.deducido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deducido.Location = new System.Drawing.Point(483, 311);
+            this.deducido.Name = "deducido";
+            this.deducido.Padding = new System.Windows.Forms.Padding(10);
+            this.deducido.Size = new System.Drawing.Size(116, 34);
+            this.deducido.TabIndex = 77;
+            this.deducido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label40
             // 
@@ -723,16 +708,15 @@
             this.label40.Text = "Total deducido:";
             this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label41
+            // retefuente
             // 
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(494, 277);
-            this.label41.Name = "label41";
-            this.label41.Padding = new System.Windows.Forms.Padding(10);
-            this.label41.Size = new System.Drawing.Size(105, 34);
-            this.label41.TabIndex = 75;
-            this.label41.Text = "dataSueldo";
-            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.retefuente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retefuente.Location = new System.Drawing.Point(468, 277);
+            this.retefuente.Name = "retefuente";
+            this.retefuente.Padding = new System.Windows.Forms.Padding(10);
+            this.retefuente.Size = new System.Drawing.Size(131, 34);
+            this.retefuente.TabIndex = 75;
+            this.retefuente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label42
             // 
@@ -745,16 +729,15 @@
             this.label42.Text = "Retefuente:";
             this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label43
+            // uvt
             // 
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(494, 243);
-            this.label43.Name = "label43";
-            this.label43.Padding = new System.Windows.Forms.Padding(10);
-            this.label43.Size = new System.Drawing.Size(105, 34);
-            this.label43.TabIndex = 73;
-            this.label43.Text = "dataSueldo";
-            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uvt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uvt.Location = new System.Drawing.Point(449, 243);
+            this.uvt.Name = "uvt";
+            this.uvt.Padding = new System.Windows.Forms.Padding(10);
+            this.uvt.Size = new System.Drawing.Size(150, 34);
+            this.uvt.TabIndex = 73;
+            this.uvt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label44
             // 
@@ -867,39 +850,39 @@
             this.panel4.Controls.Add(this.cedulaGet);
             this.panel4.Controls.Add(this.name);
             this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.label37);
+            this.panel4.Controls.Add(this.neto);
             this.panel4.Controls.Add(this.sueldo);
             this.panel4.Controls.Add(this.label38);
             this.panel4.Controls.Add(this.label14);
-            this.panel4.Controls.Add(this.label39);
+            this.panel4.Controls.Add(this.deducido);
             this.panel4.Controls.Add(this.dias);
             this.panel4.Controls.Add(this.label40);
             this.panel4.Controls.Add(this.label23);
-            this.panel4.Controls.Add(this.label41);
+            this.panel4.Controls.Add(this.retefuente);
             this.panel4.Controls.Add(this.nhed);
             this.panel4.Controls.Add(this.label42);
             this.panel4.Controls.Add(this.label22);
-            this.panel4.Controls.Add(this.label43);
+            this.panel4.Controls.Add(this.uvt);
             this.panel4.Controls.Add(this.nhen);
             this.panel4.Controls.Add(this.label44);
             this.panel4.Controls.Add(this.label24);
-            this.panel4.Controls.Add(this.label29);
+            this.panel4.Controls.Add(this.solidario);
             this.panel4.Controls.Add(this.nhedd);
             this.panel4.Controls.Add(this.label30);
             this.panel4.Controls.Add(this.label28);
-            this.panel4.Controls.Add(this.label31);
-            this.panel4.Controls.Add(this.label27);
+            this.panel4.Controls.Add(this.pension);
+            this.panel4.Controls.Add(this.nhedn);
             this.panel4.Controls.Add(this.label32);
             this.panel4.Controls.Add(this.label26);
-            this.panel4.Controls.Add(this.label33);
-            this.panel4.Controls.Add(this.label25);
+            this.panel4.Controls.Add(this.salud);
+            this.panel4.Controls.Add(this.nhrn);
             this.panel4.Controls.Add(this.label34);
             this.panel4.Controls.Add(this.label20);
-            this.panel4.Controls.Add(this.label35);
-            this.panel4.Controls.Add(this.label19);
+            this.panel4.Controls.Add(this.devengado);
+            this.panel4.Controls.Add(this.transporte);
             this.panel4.Controls.Add(this.label36);
             this.panel4.Controls.Add(this.label17);
-            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.extras);
             this.panel4.Location = new System.Drawing.Point(829, 12);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(632, 478);
@@ -970,29 +953,29 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label nhedd;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label extras;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label transporte;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label nhrn;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label nhedn;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label solidario;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label pension;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label salud;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label devengado;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label neto;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label deducido;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label retefuente;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label uvt;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Button button2;

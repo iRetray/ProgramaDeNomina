@@ -43,6 +43,52 @@ namespace ProgramaDeFactoracion {
             actualizarDatosEnTabla();
         }
 
+        private void buttonConsultar_Click(object sender, EventArgs e) {
+            int cedula = Convert.ToInt32(cedulaGet.Text);
+            Trabajador oneT = facturador.getOneData(cedula);
+            if (oneT != null) {
+                name.Text = oneT.nombre;
+                sueldo.Text = Convert.ToString(oneT.sueldo);
+                dias.Text = Convert.ToString(oneT.dias);
+                nhed.Text = Convert.ToString(oneT.nhedValor);
+                nhen.Text = Convert.ToString(oneT.nhenValor);
+                nhedd.Text = Convert.ToString(oneT.nheddValor);
+                nhedn.Text = Convert.ToString(oneT.nhednValor);
+                nhrn.Text = Convert.ToString(oneT.nhrnValor);
+                transporte.Text = Convert.ToString(oneT.transporte);
+                extras.Text = Convert.ToString(oneT.extras);
+                devengado.Text = Convert.ToString(oneT.devengado);
+                salud.Text = Convert.ToString(oneT.salud);
+                pension.Text = Convert.ToString(oneT.pension);
+                solidario.Text = Convert.ToString(oneT.solidiario);
+                nhen.Text = Convert.ToString(oneT.nhenValor);
+                uvt.Text = Convert.ToString(oneT.uvt);
+                retefuente.Text = Convert.ToString(oneT.retefuente);
+                deducido.Text = Convert.ToString(oneT.deducido);
+                neto.Text = Convert.ToString(oneT.neto);
+            } else {
+                name.Text = "Cédula no existe";
+                sueldo.Text = "";
+                dias.Text = "";
+                nhed.Text = "";
+                nhen.Text = "";
+                nhedd.Text = "";
+                nhedn.Text = "";
+                nhrn.Text = "";
+                transporte.Text = "";
+                extras.Text = "";
+                devengado.Text = "";
+                salud.Text = "";
+                pension.Text = "";
+                solidario.Text = "";
+                nhen.Text = "";
+                uvt.Text = "";
+                retefuente.Text = "";
+                deducido.Text = "";
+                neto.Text = "";
+            }
+        }
+
         private void buttonAñadir_Click(object sender, EventArgs e) {
             int cedula = Convert.ToInt32(textCedula.Text);
             String nombre = textNombre.Text;
