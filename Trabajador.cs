@@ -10,30 +10,30 @@ namespace ProgramaDeFactoracion
 
         public int cedula { get; set; }
         public String nombre { get; set; }
-        public double sueldo { get; set; }
+        public int sueldo { get; set; }
         public int dias { get; set; }
         public int nhed { get; set; }
         public int nhen { get; set; }
         public int nhedd { get; set; }
         public int nhedn { get; set; }
         public int nhrn { get; set; }
-        public double transporte { get; set; }
-        public double nhedValor { get; set; }
-        public double nhenValor { get; set; }
-        public double nheddValor { get; set; }
-        public double nhednValor { get; set; }
-        public double nhrnValor { get; set; }
-        public double extras { get; set; }
-        public double devengado { get; set; }
-        public double salud { get; set; }
-        public double pension { get; set; }
-        public double solidiario { get; set; }
-        public double uvt { get; set; }
-        public double retefuente { get; set; }
-        public double deducido { get; set; }
-        public double neto { get; set; }
+        public int transporte { get; set; }
+        public int nhedValor { get; set; }
+        public int nhenValor { get; set; }
+        public int nheddValor { get; set; }
+        public int nhednValor { get; set; }
+        public int nhrnValor { get; set; }
+        public int extras { get; set; }
+        public int devengado { get; set; }
+        public int salud { get; set; }
+        public int pension { get; set; }
+        public int solidiario { get; set; }
+        public int uvt { get; set; }
+        public int retefuente { get; set; }
+        public int deducido { get; set; }
+        public int neto { get; set; }
 
-        public Trabajador(int cedula, string nombre, double sueldo, int dias, int nhed, int nhen, int nhedd, int nhedn, int nhrn, double transporte, double nhedValor, double nhenValor, double nheddValor, double nhednValor, double nhrnValor, double extras, double devengado, double salud, double pension, double solidiario, double uvt, double retefuente, double deducido, double neto)
+        public Trabajador(int cedula, string nombre, int sueldo, int dias, int nhed, int nhen, int nhedd, int nhedn, int nhrn, int transporte, int nhedValor, int nhenValor, int nheddValor, int nhednValor, int nhrnValor, int extras, int devengado, int salud, int pension, int solidiario, int uvt, int retefuente, int deducido, int neto)
         {
             this.cedula = cedula;
             this.nombre = nombre;

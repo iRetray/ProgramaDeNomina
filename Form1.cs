@@ -46,7 +46,7 @@ namespace ProgramaDeFactoracion {
         private void buttonAñadir_Click(object sender, EventArgs e) {
             int cedula = Convert.ToInt32(textCedula.Text);
             String nombre = textNombre.Text;
-            double sueldo = Convert.ToDouble(textSueldo.Text);
+            int sueldo = Convert.ToInt32(textSueldo.Text);
             int dias = Convert.ToInt32(textDias.Text);
             int NHED = Convert.ToInt32(textNHED.Text);
             int NHEN = Convert.ToInt32(textNHEN.Text);
@@ -63,8 +63,8 @@ namespace ProgramaDeFactoracion {
                 NHEDD,
                 NHEDN,
                 NHRN,
-                0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-                0.0, 0.0, 0.0, 0.0, 0.0
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0
                );
             facturador.insertIntoDB(newT);
             actualizarDatosEnTabla();

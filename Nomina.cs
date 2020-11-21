@@ -19,17 +19,14 @@ namespace ProgramaDeFactoracion {
             t.nhrnValor = t.nhrn * 1280;
             t.extras = t.nhedValor + t.nhenValor + t.nheddValor + t.nhednValor + t.nhrnValor;
             t.devengado = t.extras + (t.sueldo/24 * t.dias);
-            t.salud = t.sueldo * 0.04;
-            Console.WriteLine(t.salud);
-            t.salud = Convert.ToDouble(Convert.ToString(t.salud).Replace(",", "."));
-            Console.WriteLine(t.salud);
-            t.pension = t.sueldo * 0.04;
+            t.salud = Convert.ToInt32(t.sueldo * 0.04);
+            t.pension = Convert.ToInt32(t.sueldo * 0.04);
             if(t.sueldo>=(877803*4)) {
-                t.solidiario = t.sueldo * 0.01;
+                t.solidiario = Convert.ToInt32(t.sueldo * 0.01);
             }
             t.uvt = t.sueldo / 35607;
             if (t.uvt >= 95) {
-                t.retefuente = t.sueldo * 0.015;
+                t.retefuente = Convert.ToInt32(t.sueldo * 0.015);
             }
             t.deducido = t.salud + t.pension + t.solidiario + t.retefuente;
             t.neto = t.devengado - t.deducido;
@@ -40,7 +37,7 @@ namespace ProgramaDeFactoracion {
             newTrabajador = completeData(newTrabajador);
             string query = "INSERT INTO employees " +
                 "(`cedula`, `nombre`, `sueldo`, `dias`, `nhed`, `nhen`, `nhedd`, `nhedn`, `nhrn`, `transporte`, `nhedv`, `nhenv`, `nheddv`, `nhednv`, `nhrnv`, `extras`, `devengado`, `salud`, `pension`, `solidario`, `uvt`, `retefuente`, `deducido`, `neto`) VALUES " +
-                "(" + newTrabajador.cedula + ", " + newTrabajador.nombre + ", " + newTrabajador.sueldo + ", " + newTrabajador.dias + ", " + newTrabajador.nhed + ", " + newTrabajador.nhen + ", " + newTrabajador.nhedd + ", " + newTrabajador.nhedn + ", " + newTrabajador.nhrn + ", " + newTrabajador.transporte + ", " + newTrabajador.nhedValor + ", " + newTrabajador.nhenValor + ", " + newTrabajador.nheddValor + ", " + newTrabajador.nhednValor + ", " + newTrabajador.nhrnValor + ", " + newTrabajador.extras + ", " + newTrabajador.devengado + ", " + newTrabajador.salud + ", " + newTrabajador.pension + ", " + newTrabajador.solidiario + ", " + newTrabajador.uvt + ", " + newTrabajador.retefuente + ", " + newTrabajador.deducido + ", " + newTrabajador.neto + ")";
+                "(" + newTrabajador.cedula + ", '" + newTrabajador.nombre + "', " + newTrabajador.sueldo + ", " + newTrabajador.dias + ", " + newTrabajador.nhed + ", " + newTrabajador.nhen + ", " + newTrabajador.nhedd + ", " + newTrabajador.nhedn + ", " + newTrabajador.nhrn + ", " + newTrabajador.transporte + ", " + newTrabajador.nhedValor + ", " + newTrabajador.nhenValor + ", " + newTrabajador.nheddValor + ", " + newTrabajador.nhednValor + ", " + newTrabajador.nhrnValor + ", " + newTrabajador.extras + ", " + newTrabajador.devengado + ", " + newTrabajador.salud + ", " + newTrabajador.pension + ", " + newTrabajador.solidiario + ", " + newTrabajador.uvt + ", " + newTrabajador.retefuente + ", " + newTrabajador.deducido + ", " + newTrabajador.neto + ")";
             Console.WriteLine(query);
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
@@ -70,28 +67,28 @@ namespace ProgramaDeFactoracion {
                         Trabajador newT = new Trabajador(
                             Convert.ToInt32(reader.GetString(0)),
                             reader.GetString(1),
-                            Convert.ToDouble(reader.GetString(2)),
+                            Convert.ToInt32(reader.GetString(2)),
                             Convert.ToInt32(reader.GetString(3)),
                             Convert.ToInt32(reader.GetString(4)),
                             Convert.ToInt32(reader.GetString(5)),
                             Convert.ToInt32(reader.GetString(6)),
                             Convert.ToInt32(reader.GetString(7)),
                             Convert.ToInt32(reader.GetString(8)),
-                            Convert.ToDouble(reader.GetString(9)),
-                            Convert.ToDouble(reader.GetString(10)),
-                            Convert.ToDouble(reader.GetString(11)),
-                            Convert.ToDouble(reader.GetString(12)),
-                            Convert.ToDouble(reader.GetString(13)),
-                            Convert.ToDouble(reader.GetString(14)),
-                            Convert.ToDouble(reader.GetString(15)),
-                            Convert.ToDouble(reader.GetString(16)),
-                            Convert.ToDouble(reader.GetString(17)),
-                            Convert.ToDouble(reader.GetString(18)),
-                            Convert.ToDouble(reader.GetString(19)),
-                            Convert.ToDouble(reader.GetString(20)),
-                            Convert.ToDouble(reader.GetString(21)),
-                            Convert.ToDouble(reader.GetString(22)),
-                            Convert.ToDouble(reader.GetString(23))
+                            Convert.ToInt32(reader.GetString(9)),
+                            Convert.ToInt32(reader.GetString(10)),
+                            Convert.ToInt32(reader.GetString(11)),
+                            Convert.ToInt32(reader.GetString(12)),
+                            Convert.ToInt32(reader.GetString(13)),
+                            Convert.ToInt32(reader.GetString(14)),
+                            Convert.ToInt32(reader.GetString(15)),
+                            Convert.ToInt32(reader.GetString(16)),
+                            Convert.ToInt32(reader.GetString(17)),
+                            Convert.ToInt32(reader.GetString(18)),
+                            Convert.ToInt32(reader.GetString(19)),
+                            Convert.ToInt32(reader.GetString(20)),
+                            Convert.ToInt32(reader.GetString(21)),
+                            Convert.ToInt32(reader.GetString(22)),
+                            Convert.ToInt32(reader.GetString(23))
                             );
                         listaTrabajadores.Add(newT);
                     }
